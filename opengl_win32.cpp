@@ -1,5 +1,4 @@
 
-
 /*
  *              This Code Was Created By Jeff Molofee 2000
  *              A HUGE Thanks To Fredric Echols For Cleaning Up
@@ -123,7 +122,7 @@ GLvoid KillGLWindow(GLvoid)                                             // Prope
  
 BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscreenflag)
 {
-  GLuint                PixelFormat;                                    // Holds The Results After Searching For A Match
+  GLuint        PixelFormat;                                            // Holds The Results After Searching For A Match
   WNDCLASS      wc;                                                     // Windows Class Structure
   DWORD         dwExStyle;                                              // Window Extended Style
   DWORD         dwStyle;                                                // Window Style
@@ -135,17 +134,17 @@ BOOL CreateGLWindow(char* title, int width, int height, int bits, bool fullscree
 
   fullscreen=fullscreenflag;                                            // Set The Global Fullscreen Flag
 
-  hInstance                     = GetModuleHandle(NULL);                // Grab An Instance For Our Window
-  wc.style                      = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;   // Redraw On Size, And Own DC For Window.
-  wc.lpfnWndProc                = (WNDPROC) WndProc;                    // WndProc Handles Messages
-  wc.cbClsExtra         = 0;                                            // No Extra Window Data
-  wc.cbWndExtra         = 0;                                            // No Extra Window Data
-  wc.hInstance          = hInstance;                                    // Set The Instance
-  wc.hIcon                      = LoadIcon(NULL, IDI_WINLOGO);          // Load The Default Icon
-  wc.hCursor                    = LoadCursor(NULL, IDC_ARROW);          // Load The Arrow Pointer
-  wc.hbrBackground      = NULL;                                         // No Background Required For GL
-  wc.lpszMenuName               = NULL;                                 // We Don't Want A Menu
-  wc.lpszClassName      = "OpenGL";                                     // Set The Class Name
+  hInstance             = GetModuleHandle(NULL);                // Grab An Instance For Our Window
+  wc.style              = CS_HREDRAW | CS_VREDRAW | CS_OWNDC;   // Redraw On Size, And Own DC For Window.
+  wc.lpfnWndProc        = (WNDPROC) WndProc;                    // WndProc Handles Messages
+  wc.cbClsExtra         = 0;                                    // No Extra Window Data
+  wc.cbWndExtra         = 0;                                    // No Extra Window Data
+  wc.hInstance          = hInstance;                            // Set The Instance
+  wc.hIcon              = LoadIcon(NULL, IDI_WINLOGO);          // Load The Default Icon
+  wc.hCursor            = LoadCursor(NULL, IDC_ARROW);          // Load The Arrow Pointer
+  wc.hbrBackground      = NULL;                                 // No Background Required For GL
+  wc.lpszMenuName       = NULL;                                 // We Don't Want A Menu
+  wc.lpszClassName      = "OpenGL";                             // Set The Class Name
 
   if (!RegisterClass(&wc))                                              // Attempt To Register The Window Class
     {
@@ -350,9 +349,9 @@ LRESULT CALLBACK WndProc(       HWND    hWnd,           // Handle For This Windo
 int WINAPI WinMain(     HINSTANCE       hInstance,                      // Instance
                         HINSTANCE       hPrevInstance,                  // Previous Instance
                         LPSTR           lpCmdLine,                      // Command Line Parameters
-                        int                     nCmdShow)               // Window Show State
+                        int             nCmdShow)                       // Window Show State
 {
-  MSG           msg;                                                    // Windows Message Structure
+  MSG   msg;                                                            // Windows Message Structure
   BOOL  done=FALSE;                                                     // Bool Variable To Exit Loop
 
                                                                         // Ask The User Which Screen Mode They Prefer
@@ -362,7 +361,7 @@ int WINAPI WinMain(     HINSTANCE       hInstance,                      // Insta
     }
 
                                                                         // Create Our OpenGL Window
-  if (!CreateGLWindow("NeHe's First Polygon Tutorial",640,480,16,fullscreen))
+  if (!CreateGLWindow("First OpenGL Polygon",640,480,16,fullscreen))
     {
       return 0;                                                         // Quit If Window Was Not Created
     }
