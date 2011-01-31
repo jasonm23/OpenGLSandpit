@@ -9,3 +9,7 @@ Samples for Ruby, python, perl and perhaps others to follow.
 - opengl_win32.cpp (compile with Visual C++ Express, requires references to glu32.lib & opengl32.lib)
 
 A simple test render that opens a win32 Window and renders a red square in an OpenGL View.
+
+### Sources
+
+The code here is initially based on the tutorials at NeHe http://nehe.gamedev.net/lesson.asp?index=01 
