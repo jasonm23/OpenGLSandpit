@@ -13,3 +13,7 @@ A simple test render that opens a win32 Window and renders a red square in an Op
 ### Sources
 
 The code here is forked from [NeHe's tutorials](http://nehe.gamedev.net/lesson.asp?index=01) 
+
+### Further reading.
+
+[The OpenGL Red Book](http://fly.cc.fer.hr/~unreal/theredbook/)
